@@ -43,3 +43,6 @@ bower.json
 
 # Ignore SimpleCov coverage log
 /coverage
+
+# Ignore CircleCI
+# circle.yml
