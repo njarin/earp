@@ -31,7 +31,9 @@ describe ExperimentsController do
     end
   end
 
-  xdescribe 'GET #show' do
+  describe 'GET #show for a logged user' do
+    before(:each){ session[:user_id] = user.id }
+
     it 'responds with status code 200' do
       get :show, params: { id: experiment.id }
       expect(response).to have_http_status 200
