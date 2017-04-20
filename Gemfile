@@ -43,7 +43,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'database_cleaner'
   gem 'chromedriver-helper'
-  gem 'simplecov'
+  gem 'simplecov', :require => false
   gem 'faker'
 end
 

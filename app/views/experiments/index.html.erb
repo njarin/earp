@@ -1,6 +1,7 @@
 <div class="index-body">
+<span class = "nav-buffer"></span>
   <div class="add-experiment">
-    <%= button_to "Add Experiment", new_experiment_path %>
+    <%= button_to "Add Experiment", new_experiment_path, method: "get" %>
   </div>
   <div class="index-header">
     <h2>Experiment Board</h2>
@@ -10,6 +11,9 @@
       <article class="individual-experiment">
         <span><%= link_to experiment.title, experiment_path(experiment.id) %></span>
         <span>Staff needed: <%= experiment.staff_needed %></span>
+        <div class="summary">
+          <span>Summary: <%= experiment.summary %></span>
+        </div>
       </article>
     <% end %>
   </div>

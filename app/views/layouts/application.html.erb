@@ -10,8 +10,16 @@
 
   <body>
     <nav>
-      <span class='logo'>EARP</span>
+      <span>&nbsp;</span>
+        <%= link_to "EARP", experiments_path, class: "nav-logo" %>
     </nav>
     <%= yield %>
+    <span class = "nav-buffer"></span>
+    <footer>
+      <span class = "nav-buffer"></span>
+        <div>
+          <%= link_to "Top", "#"%>
+      </div>
+    </footer>
   </body>
 </html>
