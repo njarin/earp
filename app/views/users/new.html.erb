@@ -12,7 +12,7 @@
       <%= f.password_field :password, placeholder: "Password" %>
     </p>
     <p>
-      <%= f.select :role, ["University faculty", "EA staff"] %>
+      <%= select_tag :role, options_for_select([["University faculty", "owner"], ["EA staff", "staff"]]), name: "user[role]" %>
     </p>
       <%= f.submit "Register" %>
     <% end %>
