@@ -24,10 +24,21 @@ describe ExperimentsController do
       get :show, params: { id: experiment.id }
       expect(response).to have_http_status 200
     end
+
+    it 'assigns the correct experiment as @experiment' do
+      get :show, params: { id: experiment.id }
+      expect(assigns(:game)).to eq(experiment)
+    end
+
+    it 'renders the :show template' do
+      get :show, params: { id: experiment.id }
+      expect(response).to render_template(:show)
+    end
+
   end
 
-  #   it 'assigns the correct experiment as @experiment'
-  #   it 'renders the :show template'
+
+
 
 
 end
