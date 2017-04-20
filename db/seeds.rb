@@ -48,7 +48,7 @@ User.create(
 
 User.create(
     email: 'staff@example.com',
-    name: 'Faculty Member',
+    name: 'Established Autogenics Staffmember',
     password: 'password',
     role: 'staff'
 )
