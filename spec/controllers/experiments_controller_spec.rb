@@ -27,7 +27,7 @@ describe ExperimentsController do
 
     it 'assigns the correct experiment as @experiment' do
       get :show, params: { id: experiment.id }
-      expect(assigns(:game)).to eq(experiment)
+      expect(assigns(:experiment)).to eq(experiment)
     end
 
     it 'renders the :show template' do
