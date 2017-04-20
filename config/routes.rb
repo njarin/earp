@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :experiments, only: [:new, :show]
+  resources :experiments, only: [:index,:show, :new, :create]
 
 end
