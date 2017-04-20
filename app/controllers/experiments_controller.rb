@@ -9,7 +9,7 @@ class ExperimentsController < ApplicationController
   def create
     @experiment = Experiment.new(experiment_params)
     if @experiment.save
-      redirect_to show_path(@experiment)
+      redirect_to experiment_path(@experiment)
     else
       render :new
     end
