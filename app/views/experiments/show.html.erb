@@ -1,4 +1,9 @@
 <div>
+  <% if @experiment.staff_needed > @experiment.staff.length %>
+    <div>
+    <%= button_to "Join Experiment Staff", experiment_path(@experiment.id), method: 'patch', data: {confirm: 'Confirm to join ' + @experiment.title} %>
+    </div>
+  <% end %>
   <div>
     <h2>Title</h2>
     <p><%= @experiment.title %></p>
