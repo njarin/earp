@@ -16,16 +16,15 @@
 
 @media (max-width: 450px) {
   .fields {
-    background-color: black;
+    margin: auto;
+    width: auto;
+    font-size: 1.2em;
+  }
+  /*.new-experiment-form {
     margin: auto;
     width: auto;
     font-size: 4em;
-  }
-  .new-experiment-form {
-    margin: auto;
-    width: auto;
-    font-size: 4em;
-  }
+  }*/
 }
 
 .outer{
@@ -45,7 +44,7 @@ nav{
   border-bottom: 2px solid #002877;
   font-family: serif;
   background-color: #FDDF33;
-  margin-bottom: 2%
+  margin-bottom: 2%;
 }
 h2 {
   text-decoration: underline;
@@ -79,6 +78,9 @@ a:hover {color:red}
 .fields {
   text-align: left;
   position: relative;
+}
+.index-body{
+
 }
 
 .summary {
@@ -114,4 +116,8 @@ article {
   padding: 2%;
 }
 
-footer {margin-top: 2%;}
+footer {
+  position: fixed;
+    left: 5px;
+    bottom: 5px;
+    height: 30px;margin-top: 2%;}
