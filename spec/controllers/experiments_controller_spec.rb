@@ -14,9 +14,10 @@ describe ExperimentsController do
                                         contact_info: "this is the contact info" )}
 
   describe 'GET #index' do
-    it 'responds with a status code of 200' do
+    # NON LOGGED IN USER
+    it 'responds with a status code of 302' do
       get :index
-      expect(response).to have_http_status 200
+      expect(response).to have_http_status 302
     end
 
     it 'assigns all the experiments as @experiments' do
