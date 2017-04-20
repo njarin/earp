@@ -14,6 +14,16 @@ describe ExperimentsController do
                                         contact_info: "this is the contact info" )}
 
   describe '#index' do
+    it 'responds with a status code of 200' do
+      get :index
+      expect(response).to have_http_status 200
+    end
+
+    it 'assigns all the experiments as @experiments' do
+      get :index
+      expect(assigns(:experiments)).to eq Experiment.all
+    end
+
     it 'renders a list of articles' do
       expect(get :index).to render_template(:index)
     end
