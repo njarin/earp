@@ -11,12 +11,11 @@ class ExperimentsController < ApplicationController
   end
 
   def update
-    p 'Use below logic when sessions is implemented'
-    # @experiment = Experiment.find(params[:id])
-    # @user = User.find(session[:user_id])
-    # @experiment.users << @user
-    # @experiment.staff_needed = @experiment.staff_needed - 1
-    # @experiment.save
+    @experiment = Experiment.find(params[:id])
+    @user = User.find(session[:user_id])
+    @experiment.users << @user
+    @experiment.staff_needed = @experiment.staff_needed - 1
+    @experiment.save
   end
 
   def new
