@@ -1,8 +1,7 @@
 <div>
+  <ul class='errors'>
+  </ul>
   <%= form_for :session, url: 'sessions' do |f| %>
-    <p>
-      <%= select_tag :role, options_for_select([['Faculty', 'owner'], ['Staff', 'staff']]), name: 'session[role]' %>
-    </p>
     <p>
       <%= f.label :email %>
       <%= f.email_field :email, placeholder: "Email" %>
