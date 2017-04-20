@@ -1,7 +1,7 @@
 <div>
   <ul class='errors'>
   </ul>
-  <%= form_for :session, url: 'sessions' do |f| %>
+  <%= form_for :session, url: sessions_path do |f| %>
     <p>
       <%= f.label :email %>
       <%= f.email_field :email, placeholder: "Email" %>
@@ -10,8 +10,8 @@
       <%= f.label :password %>
       <%= f.password_field :password, placeholder: "Password" %>
     </p>
-    <p>
+    <div>
       <%= f.submit value: "Log In" %>
-    </p>
+      </div>
   <% end %>
 </div>
