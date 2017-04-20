@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(reg_params)
     if @user.save
-      redirect_to experiments_path
+      redirect_to new_session_path
     else
       render new_user_path
     end
