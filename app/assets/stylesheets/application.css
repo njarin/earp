@@ -14,6 +14,32 @@
  *= require_self
  */
 
+@media (max-width: 450px) {
+  .fields {
+    background-color: black;
+    margin: auto;
+    width: auto;
+    font-size: 4em;
+  }
+  .new-experiment-form {
+    margin: auto;
+    width: auto;
+    font-size: 4em;
+  }
+}
+
+.outer{
+  padding: 2%;
+  border: 2px solid #002877;
+  text-align: center;
+  margin: auto;
+  width: 30%;
+  font-size: 200%;
+}
+.inner {
+  text-align: left;
+  position: relative;
+}
 nav{
   font-size: 2em;
   border-bottom: 2px solid #002877;
@@ -42,7 +68,7 @@ a {color: #002877;
 .nav-logo {text-decoration: none;}
 a:hover {color:red}
 
-.new-experiment-form{
+.new-experiment-form {
   padding: 2%;
   border: 2px solid #002877;
   text-align: center;
