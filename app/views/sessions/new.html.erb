@@ -1,10 +1,7 @@
 <div>
   <%= form_for :session, url: 'sessions' do |f| %>
     <p>
-      <%= radio_button_tag :role, "owner" %>
-      <%= label_tag(:role, "Faculty") %>
-      <%= radio_button_tag :role, "staff" %>
-      <%= label_tag(:role, "Staff") %>
+      <%= select_tag :role, options_for_select([['Faculty', 'owner'], ['Staff', 'staff']]), name: 'session[role]' %>
     </p>
     <p>
       <%= f.label :email %>
