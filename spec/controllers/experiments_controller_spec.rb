@@ -13,7 +13,7 @@ describe ExperimentsController do
                                         staff_needed: 2,
                                         contact_info: "this is the contact info" )}
 
-  describe '#index' do
+  describe 'GET #index' do
     it 'responds with a status code of 200' do
       get :index
       expect(response).to have_http_status 200
@@ -44,11 +44,6 @@ describe ExperimentsController do
       get :show, params: { id: experiment.id }
       expect(response).to render_template(:show)
     end
-
   end
-
-
-
-
 
 end
