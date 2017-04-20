@@ -1,10 +1,14 @@
 
+
 <div class = "experiment">
   <% if @experiment.staff_needed > @experiment.staff.length %>
+
+<div>
+  <!-- <% if @experiment.staff_needed > @experiment.staff.length && current_user && current_user.role == 'staff' && !@experiment.staff.include?(current_user)%>
     <div>
-    <%= button_to "Join Experiment Staff", experiment_path(@experiment.id), method: 'patch', data: {confirm: 'Confirm to join ' + @experiment.title} %>
+      <%= button_to "Join Experiment Staff", experiment_path(@experiment.id), method: 'patch', data: {confirm: 'Would you like to join this experiment?' } %>
     </div>
-  <% end %>
+  <% end %> -->
 
   <div>
     <h2 >Title: </h2>
@@ -84,9 +88,10 @@
     </div>
   </div>
 
-  <div>
-    <%= link_to "Back", experiments_path%>
-  </div>
 
-
+  <footer>
+    <div>
+      <p><%= link_to 'Back', experiments_path %></p>
+    </div>
+  </footer>
 </div>

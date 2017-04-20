@@ -14,18 +14,6 @@
  *= require_self
  */
 
-@media (max-width: 450px) {
-  .fields {
-    margin: auto;
-    width: auto;
-    font-size: 1.2em;
-  }
-  /*.new-experiment-form {
-    margin: auto;
-    width: auto;
-    font-size: 4em;
-  }*/
-}
 
 .outer{
   padding: 2%;
@@ -39,6 +27,12 @@
   text-align: left;
   position: relative;
 }
+
+footer {
+  margin-top: 2%;
+}
+
+
 nav{
   font-size: 2em;
   border-bottom: 2px solid #002877;
@@ -115,9 +109,3 @@ article {
   margin: 2%;
   padding: 2%;
 }
-
-footer {
-  position: fixed;
-    left: 5px;
-    bottom: 5px;
-    height: 30px;margin-top: 2%;}
