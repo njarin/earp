@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
-    render :'users/new'
+    render new_user_path
   end
 
   def create
