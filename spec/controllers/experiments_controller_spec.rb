@@ -12,13 +12,14 @@ describe ExperimentsController do
                                         conclusion: "this is the conclusion",
                                         staff_needed: 2,
                                         contact_info: "this is the contact info" )}
+  let(:user) { User.create( name: "Geraldine",
+                            email: "geraldine@gmail.com",
+                            password: "123",
+                            role: "staff"
+    )}
 
-  xdescribe 'GET #index' do
-    # NON LOGGED IN USER
-    it 'responds with a status code of 302' do
-      get :index
-      expect(response).to have_http_status 302
-    end
+  describe 'GET #index for a logged user' do
+    before(:each){ session[:user_id] = user.id }
 
     it 'assigns all the experiments as @experiments' do
       get :index
