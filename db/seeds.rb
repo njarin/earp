@@ -70,5 +70,5 @@ staff = User.where(role: "staff")
     staff_needed: rand(1..3),
     contact_info: Faker::PhoneNumber.phone_number)
   experiment.users << owners.sample
-  experiment.users << staff.sample
+  experiment.users << staff.sample(rand(0..1))
 end
