@@ -1,4 +1,4 @@
-require 'rails_helper'
+cd .require 'rails_helper'
 
 describe Experiment do
   describe 'associations' do
