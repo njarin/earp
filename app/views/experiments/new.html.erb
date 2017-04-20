@@ -1,0 +1,60 @@
+<span class = "nav-buffer"></span>
+<div class = "new-experiment-form">
+  <ul class="errors">
+    <% if @experiment %>
+      <% @experiment.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    <% end %>
+  </ul>
+  <div class = "fields">
+  <%= form_for :experiments, url: '/experiments' do |f| %>
+    <p>
+      <%= f.label :title %>
+      <%= f.text_field :title, placeholder: "* required field" %>
+    </p>
+    <p>
+      <%= f.label :summary %>
+      <%= f.text_area :summary, placeholder: "* required field" %>
+    </p>
+    <p>
+      <%= f.label :abstract %>
+      <%= f.text_area :abstract, placeholder: "abstract" %>
+    </p>
+    <p>
+      <%= f.label :introduction %>
+      <%= f.text_area :introduction, placeholder: "introduction" %>
+    </p>
+    <p>
+      <%= f.label :hypothesis %>
+      <%= f.text_area :hypothesis, placeholder: "hypothesis" %>
+    </p>
+    <p>
+      <%= f.label :methods %>
+      <%= f.text_area :methods, placeholder: "methods" %>
+    </p>
+    <p>
+      <%= f.label :observations %>
+      <%= f.text_area :observations, placeholder: "observations" %>
+    </p>
+    <p>
+      <%= f.label :results %>
+      <%= f.text_area :results, placeholder: "results" %>
+    </p>
+    <p>
+      <%= f.label :conclusion %>
+      <%= f.text_area :conclusion, placeholder: "conclusion" %>
+    </p>
+    <p>
+      <%= f.label :contact_info %>
+      <%= f.text_field :contact_info, placeholder: "contact info" %>
+    </p>
+    <p>
+      <%= f.label :staff_needed %>
+      <%= f.text_field :staff_needed, placeholder: "* required field" %>
+    </p>
+      <%= f.submit value: "Submit" %>
+
+  <% end %>
+  </div>
+</div>

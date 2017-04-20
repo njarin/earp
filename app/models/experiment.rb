@@ -1,5 +1,5 @@
 class Experiment < ApplicationRecord
-  validates_presence_of :title, :summary
+  validates_presence_of :title, :summary, :staff_needed
 
   has_and_belongs_to_many :users
 

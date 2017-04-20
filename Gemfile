@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Load environment
 gem 'dotenv-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -42,7 +43,8 @@ group :test do
   gem 'selenium-webdriver'
   gem 'database_cleaner'
   gem 'chromedriver-helper'
-  gem 'simplecov'
+  gem 'simplecov', :require => false
+  gem 'faker'
 end
 
 group :development, :test do
