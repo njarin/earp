@@ -11,8 +11,7 @@ describe ExperimentsController do
                                         results: "these are the results",
                                         conclusion: "this is the conclusion",
                                         staff_needed: 2,
-                                        contact_info: "this is the contact info",
-                                        owner_id: 1 )}
+                                        contact_info: "this is the contact info" )}
 
   describe '#index' do
     it 'renders a list of articles' do
@@ -21,9 +20,14 @@ describe ExperimentsController do
   end
 
   describe 'GET #show' do
-    it 'responds with status code 200'
-    it 'assigns the correct experiment as @experiment'
-    it 'renders the :show template'
+    it 'responds with status code 200' do
+      get :show, params: { id: experiment.id }
+      expect(response).to have_http_status 200
+    end
   end
+
+  #   it 'assigns the correct experiment as @experiment'
+  #   it 'renders the :show template'
+
 
 end
