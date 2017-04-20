@@ -7,10 +7,9 @@
   </div>
   <div class="experiments-container">
     <% @experiments.each do |experiment| %>
-      <article>
-        <h4><%= link_to experiment.title, experiment_path(experiment.id) %></h4>
-        <p>Staff needed: <%= experiment.staff_needed %></p>
-        <p>SHORTENED SUMMARY</p> <!-- TODO -->
+      <article class="individual-experiment">
+        <span><%= link_to experiment.title, experiment_path(experiment.id) %></span>
+        <span>Staff needed: <%= experiment.staff_needed %></span>
       </article>
     <% end %>
   </div>
