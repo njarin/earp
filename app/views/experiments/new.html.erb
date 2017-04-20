@@ -1,0 +1,40 @@
+<div>
+  <ul class="errors">
+    <% if @experiment %>
+      <% @experiment.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    <% end %>
+  </ul>
+  <%= form_for :experiments, url: '/experiments' do |f| %>
+    <p>
+      <%= f.label :title %>
+      <%= f.text_field :title, placeholder: "title" %>
+    </p>
+    <p>
+      <%= f.label :summary %>
+      <%= f.text_area :summary, placeholder: "summary" %>
+    </p>
+    <p>
+      <%= f.label :hypothesis %>
+      <%= f.text_area :hypothesis, placeholder: "hypothesis" %>
+    </p>
+    <p>
+      <%= f.label :observations %>
+      <%= f.text_area :observations, placeholder: "observations" %>
+    </p>
+    <p>
+      <%= f.label :results %>
+      <%= f.text_area :results, placeholder: "results" %>
+    </p>
+    <p>
+      <%= f.label :contact_info %>
+      <%= f.text_field :contact_info, placeholder: "contact info" %>
+    </p>
+    <p>
+      <%= f.label :staff_needed %>
+      <%= f.text_field :staff_needed, placeholder: "total staff needed" %>
+    </p>
+    <%= f.submit value: "Submit" %>
+  <% end %>
+</div>

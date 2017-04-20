@@ -40,3 +40,9 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore SimpleCov coverage log
+/coverage
+
+# Ignore CircleCI
+# circle.yml
