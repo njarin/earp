@@ -1,4 +1,10 @@
 class ExperimentsController < ApplicationController
+
+  def index
+    @experiments = Experiment.all
+    render :index
+  end
+
   def show
 
   end
@@ -17,6 +23,9 @@ class ExperimentsController < ApplicationController
 
   private
   def experiment_params
-    params.require(:experiments).permit(:title, :summary, :hypothesis, :observations, :results, :contact_info, :staff_needed)
+    params.require(:experiments).permit(:title, :summary, :abstract,
+    :introduction, :methods, :conclusion, :hypothesis, :observations, :results,
+    :contact_info, :staff_needed)
   end
+
 end

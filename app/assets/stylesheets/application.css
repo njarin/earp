@@ -14,6 +14,7 @@
  *= require_self
  */
 
+
 .new-experiment-form{
   border: 1px solid black;
   text-align: center;
@@ -34,4 +35,16 @@ body {
   background-color: #729B79;
   color: #2E2C2F;
   border-color
+  width: 80%;
+  margin: auto;
+}
+
+.experiments-container {
+  border: 3px solid black;
+}
+
+article {
+  text-align: left;
+  border: 1px solid black;
+  margin: 2%;
 }
