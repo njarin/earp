@@ -5,6 +5,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    "Hey!"
+    @user = User.new
+
   end
+
+  private
+    def reg_params
+      params.require(:user).permit(:name, :email, :password, :role)
+    end
 end
