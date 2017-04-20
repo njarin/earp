@@ -21,6 +21,9 @@ describe ExperimentsController do
   end
 
   describe 'GET #show' do
+    it 'responds with status code 200'
+    it 'assigns the correct experiment as @experiment'
+    it 'renders the :show template'
   end
 
 end
