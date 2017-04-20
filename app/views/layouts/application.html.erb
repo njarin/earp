@@ -11,7 +11,10 @@
   <body>
     <nav>
       <span>&nbsp;</span>
-        <%= link_to "EARP", experiments_path, class: "nav-logo" %>
+      <%= link_to "EARP", experiments_path, class: "nav-logo" %>
+      <% if session[:user_id] %>
+        <%= link_to "Logout", session_path(session[:user_id]), method: :delete %>
+      <% end %>
     </nav>
     <%= yield %>
     <span class = "nav-buffer"></span>
