@@ -1,4 +1,4 @@
-<div>
+<div class = "new-experiment-form">
   <ul class="errors">
     <% if @experiment %>
       <% @experiment.errors.full_messages.each do |error| %>
@@ -6,6 +6,7 @@
       <% end %>
     <% end %>
   </ul>
+  <div class = "fields">
   <%= form_for :experiments, url: '/experiments' do |f| %>
     <p>
       <%= f.label :title %>
@@ -16,8 +17,20 @@
       <%= f.text_area :summary, placeholder: "summary" %>
     </p>
     <p>
+      <%= f.label :abstract %>
+      <%= f.text_area :abstract, placeholder: "abstract" %>
+    </p>
+    <p>
+      <%= f.label :introduction %>
+      <%= f.text_area :introduction, placeholder: "introduction" %>
+    </p>
+    <p>
       <%= f.label :hypothesis %>
       <%= f.text_area :hypothesis, placeholder: "hypothesis" %>
+    </p>
+    <p>
+      <%= f.label :methods %>
+      <%= f.text_area :methods, placeholder: "methods" %>
     </p>
     <p>
       <%= f.label :observations %>
@@ -26,6 +39,10 @@
     <p>
       <%= f.label :results %>
       <%= f.text_area :results, placeholder: "results" %>
+    </p>
+    <p>
+      <%= f.label :conclusion %>
+      <%= f.text_area :conclusion, placeholder: "conclusion" %>
     </p>
     <p>
       <%= f.label :contact_info %>
@@ -37,4 +54,5 @@
     </p>
     <%= f.submit value: "Submit" %>
   <% end %>
+  </div>
 </div>
