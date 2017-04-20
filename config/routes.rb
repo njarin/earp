@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  root "sessions#new"
 
-  resources :experiments, only: [:index,:show, :new, :create, :update]
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :experiments, only: [:index, :show, :new, :create, :update]
 
 end
