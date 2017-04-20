@@ -14,9 +14,27 @@
  *= require_self
  */
 
+nav{
+  font-size: 2em;
+  border-bottom: 2px solid #002877;
+  font-family: serif;
+  background-color: #FDDF33;
+}
+
+a {color: #002877;
+  background-color: #FDDF33;
+}
+
+.nav-buffer {
+  padding: 2%;
+}
+
+.nav-logo {text-decoration: none;}
+a:hover {color:red}
 
 .new-experiment-form{
-  border: 1px solid black;
+  padding: 2%;
+  border: 2px solid #002877;
   text-align: center;
   margin: auto;
   width: 300px;
@@ -27,24 +45,41 @@
   position: relative;
 }
 
+.summary {
+  padding: 2%;
+}
+
+input[type=submit] {
+  border: 2px solid #002877;
+  background-color: inherit;
+  color: #002877;
+  font-size: 1em;
+}
+input[type=submit]:hover {
+  border: 2px solid red;
+  color:red;
+}
 div {
-  background-color:#BACDB0 ;
+
 }
 
 body {
-  background-color: #729B79;
-  color: #2E2C2F;
+  padding: 2%;
+  color: #002877;
   border-color
   width: 80%;
   margin: auto;
+  font-family: sans-serif;
 }
 
 .experiments-container {
-  border: 3px solid black;
+  border-top: 2px solid #002877;
+  padding: 2%;
 }
 
 article {
   text-align: left;
-  border: 1px solid black;
+  border: 2px solid #002877;
   margin: 2%;
+  padding: 2%;
 }
