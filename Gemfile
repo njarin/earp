@@ -43,6 +43,7 @@ group :test do
   gem 'database_cleaner'
   gem 'chromedriver-helper'
   gem 'simplecov'
+  gem 'faker'
 end
 
 group :development, :test do

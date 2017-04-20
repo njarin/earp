@@ -1,0 +1,65 @@
+<div>
+  <% if @experiment.staff_needed > @experiment.staff.length %>
+    <div>
+    <%= button_to "Join Experiment Staff", experiment_path(@experiment.id), method: 'patch', data: {confirm: 'Confirm to join ' + @experiment.title} %>
+    </div>
+  <% end %>
+  <div>
+    <h2>Title</h2>
+    <p><%= @experiment.title %></p>
+  </div>
+
+  <div>
+    <h2>Summary</h2>
+    <p><%= @experiment.summary %></p>
+  </div>
+
+  <div>
+    <h2>Staff Needed</h2>
+    <p><%= @experiment.staff_needed %></p>
+  </div>
+
+  <div>
+    <h2>Contact Information</h2>
+    <p><%= @experiment.contact_info %></p>
+  </div>
+
+  <div>
+    <h2>Abstract</h2>
+    <p><%= @experiment.summary %></p>
+  </div>
+
+  <div>
+    <h2>Introduction</h2>
+    <p><%= @experiment.introduction %></p>
+  </div>
+
+  <div>
+    <h2>Hypothesis</h2>
+    <p><%= @experiment.hypothesis %></p>
+  </div>
+
+  <div>
+    <h2>Methods</h2>
+    <p><%= @experiment.methods %></p>
+  </div>
+
+  <div>
+    <h2>Observations</h2>
+    <p><%= @experiment.observations %></p>
+  </div>
+
+  <div>
+    <h2>Results</h2>
+    <p><%= @experiment.results %></p>
+  </div>
+
+  <div>
+    <h2>Conclusion</h2>
+    <p><%= @experiment.conclusion %></p>
+  </div>
+
+  <div>
+    <p><%= link_to 'Back', experiments_path %></p>
+  </div>
+</div>
