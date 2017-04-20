@@ -87,3 +87,8 @@ article {
   margin: 2%;
   padding: 2%;
 }
+
+.reveal-down {
+  background-color: pink;
+  display: none;
+}
