@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  width: 80%;
+  margin: auto;
+}
+
+.experiments-container {
+  border: 3px solid black;
+}
+
+article {
+  text-align: left;
+  border: 1px solid black;
+  margin: 2%;
+
+}

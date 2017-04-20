@@ -1,0 +1,17 @@
+<div class="index-body">
+  <div class="add-experiment">
+    <%= button_to "Add Experiment", new_experiment_path %>
+  </div>
+  <div class="index-header">
+    <h2>Experiment Board</h2>
+  </div>
+  <div class="experiments-container">
+    <% @experiments.each do |experiment| %>
+      <article>
+        <h4><%= link_to experiment.title, experiment_path(experiment.id) %></h4>
+        <p>Staff needed: <%= experiment.staff_needed %></p>
+        <p>SHORTENED SUMMARY</p> <!-- TODO -->
+      </article>
+    <% end %>
+  </div>
+</div>
