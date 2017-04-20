@@ -23,16 +23,15 @@ ActiveRecord::Schema.define(version: 20170419233850) do
     t.text     "results"
     t.string   "contact_info"
     t.integer  "staff_needed"
-    t.integer  "owner_id",     null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
   create_table "experiments_users", force: :cascade do |t|
-    t.integer  "staffed_experiment_id"
-    t.integer  "staff_member_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.integer  "user_id"
+    t.integer  "experiment_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|

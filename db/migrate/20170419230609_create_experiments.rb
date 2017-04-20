@@ -8,7 +8,6 @@ class CreateExperiments < ActiveRecord::Migration[5.0]
       t.text :results
       t.string :contact_info
       t.integer :staff_needed
-      t.integer :owner_id, null: false
       t.timestamps null: false
     end
   end

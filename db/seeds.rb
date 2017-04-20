@@ -12,6 +12,5 @@ User.create(name: "Bob", email: "jo@jo.jo", password: "123", role: "staff")
 
 Experiment.create(
                   title: "Join us!",
-                  summary: "yeah!",
-                  owner_id: 1
+                  summary: "yeah!"
   )
