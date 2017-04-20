@@ -1,4 +1,11 @@
 <div>
+  <ul class="errors">
+    <% if @experiment %>
+      <% @experiment.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    <% end %>
+  </ul>
   <%= form_for :experiments, url: '/experiments' do |f| %>
     <p>
       <%= f.label :title %>
