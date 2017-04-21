@@ -8,8 +8,8 @@
   <div class="experiments-container content">
     <% @experiments.each do |experiment| %>
       <article class="individual-experiment">
-        <span><%= link_to experiment.title, experiment_path(experiment.id) %></span>
-        <span>Staff needed: <%= experiment.staff_needed %></span>
+        <p><%= link_to experiment.title, experiment_path(experiment.id) %></p>
+        <p>Staff needed: <%= experiment.staff_needed %></p>
         <div class="summary">
           <span>Summary: <%= experiment.summary %></span>
         </div>
