@@ -10,6 +10,15 @@
     <p><%= @experiment.summary %></p>
   </div>
 
+  <div class='current-staff'>
+    <h2>Current Staff</h2>
+    <ul>
+    <% @experiment.staff.each do |staffmember| %>
+      <li><%= staffmember.name %></li>
+    <% end %>
+    </ul>
+  </div>
+
   <div class='staff-needed'>
     <h2>Staff Needed</h2>
     <p><%= @experiment.staff_needed %></p>
