@@ -2,7 +2,7 @@ class ExperimentsController < ApplicationController
   before_action :require_login
 
   def index
-    @experiments = Experiment.all
+    @experiments = Experiment.all.reverse
     render :index
   end
 
