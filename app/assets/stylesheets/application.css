@@ -86,12 +86,16 @@ a {
   background-color: #FDDF33;
 }
 
+.experiments-container {
+  max-width: 90%;
+}
+
 .experiment{
   border: 2px solid #002877;
 }
 
 .content{
-
+  margin: auto;
 }
 
 
@@ -120,6 +124,7 @@ a:hover {
 }
 
 input[type=submit] {
+  margin: auto;
   max-width: 90%;
   border: 2px solid #002877;
   background-color: inherit;
