@@ -15,10 +15,10 @@
 //= require turbolinks
 //= require_tree .
 
-// Toggles More Info / Hide Info on Experiment show page
+// Toggles More Info / Hide Info on Experiment
 $(document).ready(function() {
-  $('#reveal-info').on('click', function(event){
-    $('.reveal-down').slideToggle(200);
+  $(document).on('click','#reveal-info', function(event){
+    $('.reveal-down').slideToggle(150);
     $(this).text(function(i, text){
       return text === "More Information" ? "Hide Information" : "More Information";
     })
