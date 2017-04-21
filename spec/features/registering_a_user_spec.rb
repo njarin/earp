@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature "registering a user", js: true do
+feature "registering a user" do
   context "successful registration" do
     scenario "visitor registers for EARP" do
       visit new_user_path
