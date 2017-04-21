@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: login_params[:email])
       if user && user.authenticate(login_params[:password])
         session[:user_id] = user.id
-        render emperiments_path
+        render experiments_path
       else
         render new_sessions_path
       end
