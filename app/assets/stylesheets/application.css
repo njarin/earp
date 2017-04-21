@@ -14,15 +14,36 @@
  *= require_self
  */
 
+body {
+  width: 100%;
+  min-height: 1000px;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+nav {
+  min-width: 100%;
+  border-bottom: 2px solid #002877;
+  background-color: #FDDF33;
+  margin-bottom: 2%;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.nav-logo {
+  font-size: 5em;
+  padding-left: 2%;
+}
 
 .outer{
-  padding: 2%;
   border: 2px solid #002877;
   text-align: center;
   margin: auto;
-  width: 30%;
-  font-size: 200%;
+  width: 90%;
 }
+
 .inner {
   text-align: left;
   position: relative;
@@ -33,36 +54,30 @@ footer {
 }
 
 
-nav{
-  font-size: 2em;
-  border-bottom: 2px solid #002877;
-  font-family: serif;
-  background-color: #FDDF33;
-  margin-bottom: 2%;
-}
+
 h2 {
   text-decoration: underline;
 }
-a {color: #002877;
+
+a {
+  color: #002877;
   background-color: #FDDF33;
 }
 
 .experiment{
-  padding: 2%;
   border: 2px solid #002877;
 }
-.nav-buffer {
-  padding: 2%;
-}
+
 .content{
-  padding-left: 2%;
+
 }
 
-.nav-logo {text-decoration: none;}
-a:hover {color:red}
+
+a:hover {
+  color:red
+}
 
 .new-experiment-form {
-  padding: 2%;
   border: 2px solid #002877;
   text-align: center;
   margin: auto;
@@ -73,12 +88,13 @@ a:hover {color:red}
   text-align: left;
   position: relative;
 }
+
 .index-body{
 
 }
 
 .summary {
-  padding: 2%;
+
 }
 
 input[type=submit] {
@@ -87,26 +103,16 @@ input[type=submit] {
   color: #002877;
   font-size: 1em;
 }
+
 input[type=submit]:hover {
   border: 2px solid red;
   color:red;
 }
 
-body {
-  padding: 2%;
-  color: #002877;
-  width: 80%;
-  margin: auto;
-  font-family: sans-serif;
-}
-
-
 
 article {
   text-align: left;
   border: 2px solid #002877;
-  margin: 2%;
-  padding: 2%;
 }
 
 .reveal-down {
