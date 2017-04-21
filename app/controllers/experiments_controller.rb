@@ -1,5 +1,5 @@
 class ExperimentsController < ApplicationController
-  # before_action :require_login
+  before_action :require_login
 
   def index
     @experiments = Experiment.all
@@ -18,7 +18,6 @@ class ExperimentsController < ApplicationController
     @experiment.save
     respond_to do |format|
       format.js
-      format.html
     end
   end
 
