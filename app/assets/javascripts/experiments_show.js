@@ -6,4 +6,15 @@ $(document).ready(function() {
       return text === "More Information" ? "Hide Information" : "More Information";
     })
   })
+  $(document).on('click','.join-experiment-btn', function(event){
+    event.preventDefault();
+    $.ajax({
+      url: window.location.pathname,
+      type: 'PATCH'
+    }).done(function(response) {
+      console.log(response);
+      var content =  JSON.parse(response);
+      $("#landing-ajax").html(content);
+    });
+  });
 });

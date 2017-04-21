@@ -1,10 +1,12 @@
-<% if @experiment.staff_needed > 0 && current_user && current_user.role == 'staff' && !@experiment.staff.include?(current_user)%>
-  <br>
+<% if @experiment.staff_needed > 0 && current_user && current_user.role == "staff" && !@experiment.staff.include?(current_user)%>
+
   <div>
-    <%= button_to "Join Experiment Staff", experiment_path(@experiment.id), method: :patch, class: 'join-experiment-btn', data: {confirm: 'Would you like to join this experiment?' } %>
+    <%= button_to "Join Experiment Staff", experiment_path(@experiment.id), method: :patch, class: "join-experiment-btn", data: {confirm: "Would you like to join this experiment?" } %>
   </div>
-<% elsif @experiment.staff_needed > 0 && current_user && current_user.role == 'staff' %>
-  <p class='join-experiment-notice'>You have joined this experiment </p>
+<% elsif @experiment.staff_needed > 0 && current_user && current_user.role == "staff" %>
+  <p class="join-experiment-notice">You have joined this experiment </p>
 <% elsif @experiment.staff_needed == 0 %>
-  <p class='join-experiment-notice'>Experiment is full on staff</p>
+  <p class="join-experiment-notice">Experiment is full on staff</p>
+
 <% end %>
+<br>
