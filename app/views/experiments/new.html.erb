@@ -8,7 +8,7 @@
     <% end %>
   </ul>
   <div class = "fields">
-  <%= form_for :experiments, url: '/experiments' do |f| %>
+  <%= form_for :experiments, url: experiments_path do |f| %>
     <p>
       <%= f.label :title %>
       <%= f.text_field :title, placeholder: "*required" %>
