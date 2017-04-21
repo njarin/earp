@@ -23,7 +23,7 @@
   </div>
 
   <div class="current-staff">
-    <h2>Current Staff</h2>
+    <h2>Current Staff: </h2>
     <ul>
     <% @experiment.staff.each do |staffmember| %>
       <li><%= staffmember.name %></li>
@@ -32,7 +32,7 @@
   </div>
 
   <div class="staff-needed">
-    <h2>Staff Needed</h2>
+    <h2>Staff Needed: </h2>
     <p class="num-staff-needed"><%= @experiment.staff_needed %></p>
     </div>
 
