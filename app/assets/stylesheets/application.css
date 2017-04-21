@@ -163,6 +163,27 @@ input[type=submit]:hover {
   color:red;
 }
 
+body {
+  padding: 2%;
+  color: #002877;
+  width: 80%;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+
+
+article {
+  text-align: left;
+  border: 2px solid #002877;
+  margin: 2%;
+  padding: 2%;
+}
+
+.join-experiment-notice {
+  color: red;
+}
+
 .reveal-down {
   display: none;
 }

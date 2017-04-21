@@ -28,6 +28,12 @@ end
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+
+ActiveRecord::Migration.maintain_test_schema!
+
 RSpec.configure do |config|
 
 #   Below here is the code you need to get your database cleaner to work with capybara
@@ -49,6 +55,11 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
+
+# unsure on function of this:
+  config.use_transactional_fixtures = true
+# ===========================
+
   config.infer_spec_type_from_file_location!
 
   config.filter_rails_from_backtrace!

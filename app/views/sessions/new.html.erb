@@ -2,13 +2,17 @@
   <div class = "inner">
   <ul class='errors'>
   </ul>
-  <%= form_for :session, url: sessions_path, remote: true do |f| %>
+  <!-- ADD REMOTE TRUE TO FORM BELOW TO AJAXIFY! -->
+  <%= form_for :session, url: sessions_path do |f| %>
       <%= f.email_field :email, placeholder: "Email" %>
       <%= f.password_field :password, placeholder: "Password" %>
-      <%= f.submit value: "Log In" %>
+    <div>
+      <%= f.submit "Log In" %>
+    </div>
   <% end %>
   </div>
   <div>
-    Not registered for EARP access? <%= link_to 'Register', new_user_path, remote: true %>
+<!-- ADD REMOTE TRUE TO FORM BELOW TO AJAXIFY! -->
+    Not registered for EARP access? <%= link_to 'Register', new_user_path %>
   </div>
 </div>

@@ -75,3 +75,8 @@ staff = User.where(role: "staff")
   experiment.staff_needed = experiment.staff_needed - num_staff
   experiment.save
 end
+
+Experiment.create(
+    title: Faker::Lorem.sentence,
+    summary: Faker::Lorem.paragraph,
+    staff_needed: 1)
