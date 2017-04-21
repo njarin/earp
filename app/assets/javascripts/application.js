@@ -15,3 +15,12 @@
 //= require turbolinks
 //= require_tree .
 
+
+$(document).ready(function() {
+  $('#reveal-info').on('click', function(event){
+    $('.reveal-down').slideToggle(150);
+    $(this).text(function(i, text){
+      return text === "More Information" ? "Hide Information" : "More Information";
+    })
+  })
+});
