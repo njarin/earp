@@ -66,9 +66,15 @@ input {
   margin: 2%;
 }
 
+select {
+  padding: 3%;
+  min-width: 90%;
+  font-size: 3em;
+}
+
 
 h2 {
-  text-decoration: underline;
+  font-size: 3em;
 }
 
 a {
@@ -112,8 +118,6 @@ a:hover {
 input[type=submit] {
   border: 2px solid #002877;
   background-color: inherit;
-  color: #002877;
-  font-size: 1em;
 }
 
 input[type=submit]:hover {
