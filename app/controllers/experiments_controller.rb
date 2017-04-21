@@ -13,14 +13,15 @@ class ExperimentsController < ApplicationController
 
   def update
     return redirect_to :root unless current_user
-    respond_to do |format|
-      format.js
-    end
     @experiment = Experiment.find(params[:id])
     @user = User.find(session[:user_id])
     @experiment.users << @user
     @experiment.staff_needed = @experiment.staff_needed - 1
     @experiment.save
+    respond_to do |format|
+      format.js
+      format.html {render :show }
+    end
   end
 
   def new
