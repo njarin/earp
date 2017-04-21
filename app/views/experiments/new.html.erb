@@ -11,39 +11,39 @@
   <%= form_for :experiments, url: '/experiments' do |f| %>
     <p>
       <%= f.label :title %>
-      <%= f.text_field :title, placeholder: "* required field" %>
+      <%= f.text_field :title, placeholder: "*required" %>
     </p>
     <p>
       <%= f.label :summary %>
-      <%= f.text_area :summary, placeholder: "* required field" %>
+      <%= f.text_area :summary, placeholder: "*required" %>
     </p>
     <p>
       <%= f.label :abstract %>
-      <%= f.text_area :abstract, placeholder: "abstract" %>
+      <%= f.text_area :abstract, placeholder: "optional" %>
     </p>
     <p>
       <%= f.label :introduction %>
-      <%= f.text_area :introduction, placeholder: "introduction" %>
+      <%= f.text_area :introduction, placeholder: "optional" %>
     </p>
     <p>
       <%= f.label :hypothesis %>
-      <%= f.text_area :hypothesis, placeholder: "hypothesis" %>
+      <%= f.text_area :hypothesis, placeholder: "optional" %>
     </p>
     <p>
       <%= f.label :methods %>
-      <%= f.text_area :methods, placeholder: "methods" %>
+      <%= f.text_area :methods, placeholder: "optional" %>
     </p>
     <p>
       <%= f.label :observations %>
-      <%= f.text_area :observations, placeholder: "observations" %>
+      <%= f.text_area :observations, placeholder: "optional" %>
     </p>
     <p>
       <%= f.label :results %>
-      <%= f.text_area :results, placeholder: "results" %>
+      <%= f.text_area :results, placeholder: "optional" %>
     </p>
     <p>
       <%= f.label :conclusion %>
-      <%= f.text_area :conclusion, placeholder: "conclusion" %>
+      <%= f.text_area :conclusion, placeholder: "optional" %>
     </p>
     <p>
       <%= f.label :contact_info %>
@@ -51,7 +51,7 @@
     </p>
     <p>
       <%= f.label :staff_needed %>
-      <%= f.text_field :staff_needed, placeholder: "* required field" %>
+      <%= f.text_field :staff_needed, placeholder: "*required" %>
     </p>
       <%= f.submit "Submit" %>
 
