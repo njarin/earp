@@ -20,7 +20,7 @@ class ExperimentsController < ApplicationController
     @experiment.save
     respond_to do |format|
       format.js
-      format.html {render :show }
+      format.html { render :show }
     end
   end
 
