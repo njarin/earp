@@ -19,7 +19,7 @@
 $(document).ready(function() {
   $(document).on('click','#reveal-info', function(event){
     $('.reveal-down').slideToggle(150);
-    $(this).text(function(text){
+    $(this).text(function(i, text){
       return text === "More Information" ? "Hide Information" : "More Information";
     })
   })
