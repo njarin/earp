@@ -1,10 +1,13 @@
 class ExperimentsController < ApplicationController
 
-  def index
-    return redirect_to :root unless current_user
-    @experiments = Experiment.all
-    render :index
-  end
+  before_action :all_experiments, only: [:index,:show,:create, :update,:new]
+
+
+  #def index
+   # return redirect_to :root unless current_user
+    #@experiments = Experiment.all
+    #render :index
+  #end
 
   def show
     return redirect_to :root unless current_user
@@ -35,6 +38,12 @@ class ExperimentsController < ApplicationController
   end
 
   private
+
+  def all_experiments
+    return redirect_to :root unless current_user
+    @experiments = Experiment.all
+  end
+
   def experiment_params
     params.require(:experiments).permit(:title, :summary, :abstract,
     :introduction, :methods, :conclusion, :hypothesis, :observations, :results,
