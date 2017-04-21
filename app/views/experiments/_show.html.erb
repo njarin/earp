@@ -1,12 +1,11 @@
 
-<div id="landing-ajax">
-<!-- above div temporarily named for functionality pre full ajaxify of site -->
+<div>
 
 <div class="join-experiment-container">
   <%= render "join_experiment" %>
 </div>
 
-<div id= "<%=@experiment.id%>" class = "experiment">
+<div class = "experiment">
 
   <div>
     <h2 >Title: </h2>
@@ -43,6 +42,7 @@
     <p><%= @experiment.contact_info %></p>
     </div>
   </div>
+
 
 
   <div class="reveal-down">
@@ -96,6 +96,7 @@
     </div>
   </div>
   <button id="reveal-info" type="button">More Information</button>
+
   <footer>
       <p><%= link_to "Back", experiments_path %></p>
   </footer>

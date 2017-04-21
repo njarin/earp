@@ -3,15 +3,20 @@ class SessionsController < ApplicationController
 
   def new
     return redirect_to experiments_path if current_user
-   end
+  end
 
   def create
     user = User.find_by(email: login_params[:email])
       if user && user.authenticate(login_params[:password])
         session[:user_id] = user.id
-        render experiments_path
+
+#TOGGLE BELOW COMMENTS FOR AJAXIFY!
+        redirect_to experiments_path
+        # render experiments_path
       else
-        render new_sessions_path
+#TOGGLE BELOW COMMENTS FOR AJAXIFY!
+        redirect_to new_session_path
+        # render new_sessions_path
       end
   end
 
