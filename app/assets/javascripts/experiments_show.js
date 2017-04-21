@@ -8,8 +8,9 @@ $(document).ready(function() {
   })
   $(document).on('click','.join-experiment-btn', function(event){
     event.preventDefault();
+    var experiment_id = $('.experiment').attr('id')
     $.ajax({
-      url: window.location.pathname,
+      url: '/experiments/' + experiment_id,
       type: 'PATCH'
     }).done(function(response) {
       var content =  JSON.parse(response);
