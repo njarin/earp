@@ -1,6 +1,8 @@
 <div class="index-body content">
   <div class="add-experiment content">
-    <%= button_to "Add Experiment", new_experiment_path, method: "get", class: "content" %>
+    <% if User.find(session[:user_id]).role == "owner" %>
+      <%= button_to "Add Experiment", new_experiment_path, method: "get", class: "content" %>
+    <% end %>
   </div>
   <div class="index-header">
     <h2>Experiment Board</h2>
