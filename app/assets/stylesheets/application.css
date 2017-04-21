@@ -80,18 +80,32 @@ select {
   border-color: #002877;
 }
 
-
 h2 {
   font-size: 3em;
+  margin: auto;
+  color: #002877;
+  padding: 10px;
+}
+
+.errors {
+  color: red;
+  font-size: 2em;
 }
 
 a {
   color: #002877;
   background-color: #FDDF33;
+  text-decoration: none;
 }
 
 .experiments-container {
   max-width: 90%;
+}
+
+article {
+  border: 2px solid #002877;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 .experiment{
@@ -101,7 +115,6 @@ a {
 .content{
   margin: auto;
 }
-
 
 a:hover {
   color:red
@@ -115,7 +128,6 @@ a:hover {
   font-size: 1.5em;
 }
 .fields {
-  text-align: left;
   position: relative;
 }
 
@@ -137,12 +149,6 @@ input[type=submit] {
 input[type=submit]:hover {
   border: 2px solid red;
   color:red;
-}
-
-
-article {
-  text-align: left;
-  border: 2px solid #002877;
 }
 
 .reveal-down {
