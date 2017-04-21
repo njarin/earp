@@ -56,6 +56,10 @@ nav a {
   font-size: 2em;
 }
 
+.registration-link {
+  padding: 5%;
+}
+
 input {
   width: 80%;
   padding: 12px;
