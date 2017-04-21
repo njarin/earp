@@ -3,16 +3,16 @@ class SessionsController < ApplicationController
 
   def new
     return redirect_to experiments_path if current_user
-  end
+   end
 
   def create
     user = User.find_by(email: login_params[:email])
-    if user && user.authenticate(login_params[:password])
-      session[:user_id] = user.id
-      redirect_to experiments_path
-    else
-      render :new
-    end
+      if user && user.authenticate(login_params[:password])
+        session[:user_id] = user.id
+        render experiments_path
+      else
+        render new_sessions_path
+      end
   end
 
   def destroy
