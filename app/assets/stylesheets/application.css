@@ -119,7 +119,7 @@ article {
 
 .content{
   margin: auto;
-  padding: 10px;
+  padding-left: 2.5%;
 }
 
 #reveal-info {
@@ -190,4 +190,8 @@ article {
 
 .reg-link {
   font-size: 4em;
+}
+
+.num-staff-needed {
+  padding-left: 2.5%;
 }
