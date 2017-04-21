@@ -1,71 +1,98 @@
-<div>
-  <!-- <% if @experiment.staff_needed > @experiment.staff.length && current_user && current_user.role == 'staff' && !@experiment.staff.include?(current_user)%>
+
+
+<div class = "experiment">
+
+
+  <!--
+
+ <% if @experiment.staff_needed > @experiment.staff.length && current_user && current_user.role == 'staff' && !@experiment.staff.include?(current_user)%>
     <div>
       <%= button_to "Join Experiment Staff", experiment_path(@experiment.id), method: 'patch', data: {confirm: 'Would you like to join this experiment?' } %>
     </div>
   <% end %> -->
-  <div>
-    <h2>Title</h2>
-    <p><%= @experiment.title %></p>
-  </div>
 
   <div>
-    <h2>Summary</h2>
+    <h2 >Title: </h2>
+    <div class = "content">
+      <p><%= @experiment.title %></p>
+  </div>
+</div>
+
+  <div>
+    <h2>Summary: </h2>
+    <div class = "content">
     <p><%= @experiment.summary %></p>
+    </div>
   </div>
 
   <div>
-    <h2>Staff Needed</h2>
+    <h2>Staff Needed: </h2>
+    <div class = "content">
     <p><%= @experiment.staff_needed %></p>
+    </div>
   </div>
 
   <div>
-    <h2>Contact Information</h2>
+    <h2>Contact Information: </h2>
+    <div class = "content">
     <p><%= @experiment.contact_info %></p>
+    </div>
   </div>
 
-  <div>
-    <h2>Abstract</h2>
-    <p><%= @experiment.summary %></p>
-  </div>
+  <button id='reveal-info' type="button">More Information</button>
 
-  <div>
-    <h2>Introduction</h2>
-    <p><%= @experiment.introduction %></p>
-  </div>
+  <div class='reveal-down'>
+    <div>
+      <h2>Abstract: </h2>
+      <div class = "content">
+      <p><%= @experiment.summary %></p>
+      </div>
+    </div>
 
-  <div>
-    <h2>Hypothesis</h2>
-    <p><%= @experiment.hypothesis %></p>
-  </div>
+    <div>
+      <h2>Introduction: </h2>
+      <div class = "content">
+      <p><%= @experiment.introduction %></p>
+      </div>
+    </div>
 
-  <div>
-    <h2>Methods</h2>
-    <p><%= @experiment.methods %></p>
-  </div>
+    <div>
+      <h2>Hypothesis: </h2>
+      <div class = "content">
+      <p><%= @experiment.hypothesis %></p>
+      </div>
+    </div>
 
-  <div>
-    <h2>Observations</h2>
-    <p><%= @experiment.observations %></p>
-  </div>
+    <div>
+      <h2>Methods: </h2>
+      <div class = "content">
+      <p><%= @experiment.methods %></p>
+      </div>
+    </div>
 
-  <div>
-    <h2>Results</h2>
-    <p><%= @experiment.results %></p>
-  </div>
+    <div>
+      <h2>Observations: </h2>
+      <div class = "content">
+      <p><%= @experiment.observations %></p>
+      </div>
+    </div>
 
-  <div>
-    <h2>Conclusion</h2>
-    <p><%= @experiment.conclusion %></p>
-  </div>
+    <div>
+      <h2>Results: </h2>
+      <div class = "content">
+      <p><%= @experiment.results %></p>
+      </div>
+    </div>
 
+    <div>
+      <h2>Conclusion: </h2>
+      <div class = "content">
+      <p><%= @experiment.conclusion %></p>
+      </div>
+    </div>
+  </div>
 
   <footer>
-    <div>
       <p><%= link_to 'Back', experiments_path %></p>
-    </div>
-      <div>
-        <%= link_to "Top", "#"%>
-    </div>
   </footer>
 </div>
