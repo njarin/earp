@@ -12,7 +12,6 @@ $(document).ready(function() {
       url: window.location.pathname,
       type: 'PATCH'
     }).done(function(response) {
-      console.log(response);
       var content =  JSON.parse(response);
       $("#landing-ajax").html(content);
     });
