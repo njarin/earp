@@ -14,29 +14,54 @@
  *= require_self
  */
 
+
+.outer{
+  padding: 2%;
+  border: 2px solid #002877;
+  text-align: center;
+  margin: auto;
+  width: 30%;
+  font-size: 200%;
+}
+.inner {
+  text-align: left;
+  position: relative;
+}
+
 footer {
   margin-top: 2%;
 }
+
 
 nav{
   font-size: 2em;
   border-bottom: 2px solid #002877;
   font-family: serif;
   background-color: #FDDF33;
+  margin-bottom: 2%;
 }
-
+h2 {
+  text-decoration: underline;
+}
 a {color: #002877;
   background-color: #FDDF33;
 }
 
+.experiment{
+  padding: 2%;
+  border: 2px solid #002877;
+}
 .nav-buffer {
   padding: 2%;
+}
+.content{
+  padding-left: 2%;
 }
 
 .nav-logo {text-decoration: none;}
 a:hover {color:red}
 
-.new-experiment-form{
+.new-experiment-form {
   padding: 2%;
   border: 2px solid #002877;
   text-align: center;
@@ -47,6 +72,9 @@ a:hover {color:red}
 .fields {
   text-align: left;
   position: relative;
+}
+.index-body{
+
 }
 
 .summary {
@@ -63,9 +91,6 @@ input[type=submit]:hover {
   border: 2px solid red;
   color:red;
 }
-div {
-
-}
 
 body {
   padding: 2%;
@@ -75,10 +100,7 @@ body {
   font-family: sans-serif;
 }
 
-.experiments-container {
-  border-top: 2px solid #002877;
-  padding: 2%;
-}
+
 
 article {
   text-align: left;
@@ -89,4 +111,7 @@ article {
 
 .join-experiment-notice {
   color: red;
+
+.reveal-down {
+  display: none;
 }
