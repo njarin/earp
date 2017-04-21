@@ -1,23 +1,15 @@
-<div class = "inner">
 <div class = "outer">
+<div class = "inner">
   <ul class='errors'>
   </ul>
+  <div class="form">
   <%= form_for :session, url: sessions_path do |f| %>
-    <p>
-      <%= f.label :email %>
       <%= f.email_field :email, placeholder: "Email" %>
-    </p>
-    <p>
-      <%= f.label :password %>
       <%= f.password_field :password, placeholder: "Password" %>
-    </p>
-    <div>
       <%= f.submit value: "Log In" %>
-    </div>
   <% end %>
-  <br>
+  </div>
   <div>
     Not registered for EARP access? <%= link_to 'Register', new_user_path %>
-
   </div>
 </div>

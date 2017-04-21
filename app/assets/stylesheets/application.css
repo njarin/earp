@@ -48,17 +48,23 @@ nav a {
   text-align: center;
   margin: auto;
   width: 90%;
+  min-height: 900px;
+  max-height: 90%;
 }
 
 .inner {
-  text-align: left;
-  position: relative;
+  font-size: 2em;
 }
 
-footer {
-  margin-top: 2%;
+input {
+  width: 80%;
+  padding: 12px;
+  font-size: 3em;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #002877;
+  margin: 2%;
 }
-
 
 
 h2 {
