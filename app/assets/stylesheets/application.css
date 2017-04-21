@@ -95,7 +95,6 @@ input[type=submit]:hover {
 body {
   padding: 2%;
   color: #002877;
-  border-color
   width: 80%;
   margin: auto;
   font-family: sans-serif;
@@ -108,4 +107,8 @@ article {
   border: 2px solid #002877;
   margin: 2%;
   padding: 2%;
+}
+
+.reveal-down {
+  display: none;
 }

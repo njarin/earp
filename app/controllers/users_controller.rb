@@ -7,7 +7,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(reg_params)
     if @user.save
-      redirect_to new_session_path
+      session[:user_id] = @user.id
+      @experiments = Experiment.all
+      render 'experiments/index'
     else
       render new_user_path
     end
