@@ -1,21 +1,16 @@
 class ExperimentsController < ApplicationController
+  # before_action :require_login
 
   def index
- #   return redirect_to :root unless current_user
-
- # setting session for development - remove before pushing
- session[:user_id] = 253
     @experiments = Experiment.all
     render :index
   end
 
   def show
- #   return redirect_to :root unless current_user
     @experiment = Experiment.find(params[:id])
   end
 
   def update
-    # return redirect_to :root unless current_user
     @experiment = Experiment.find(params[:id])
     @user = User.find(session[:user_id])
     @experiment.users << @user
@@ -28,11 +23,9 @@ class ExperimentsController < ApplicationController
   end
 
   def new
-    return redirect_to :root unless current_user
   end
 
   def create
-    return redirect_to :root unless current_user
     @experiment = Experiment.new(experiment_params)
     if @experiment.save
       redirect_to experiment_path(@experiment)
@@ -48,4 +41,10 @@ class ExperimentsController < ApplicationController
     :contact_info, :staff_needed)
   end
 
+  def require_login
+    unless current_user
+      flash[:error] = "You must be logged in to access this section"
+      redirect_to root_path # halts request cycle
+    end
+  end
 end
