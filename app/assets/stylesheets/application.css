@@ -68,8 +68,12 @@ input {
 
 select {
   padding: 3%;
-  min-width: 90%;
+  min-width: 80%;
   font-size: 3em;
+  overflow:hidden;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #002877;
 }
 
 
@@ -116,6 +120,7 @@ a:hover {
 }
 
 input[type=submit] {
+  max-width: 90%;
   border: 2px solid #002877;
   background-color: inherit;
 }
