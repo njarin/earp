@@ -109,3 +109,7 @@ article {
   margin: 2%;
   padding: 2%;
 }
+
+.reveal-down {
+  display: none;
+}
