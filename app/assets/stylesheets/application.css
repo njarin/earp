@@ -37,6 +37,12 @@ nav a {
   padding-left: 2%;
 }
 
+.logout {
+  font-size: 5em;
+  float: right;
+  padding-right: 2%;
+}
+
 .outer{
   border: 2px solid #002877;
   text-align: center;

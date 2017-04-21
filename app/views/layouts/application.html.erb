@@ -13,7 +13,7 @@
 
       <%= link_to "EARP", experiments_path, class: "nav-logo" %>
       <% if session[:user_id] %>
-        <%= link_to "Logout", session_path(session[:user_id]), method: :delete %>
+        <%= link_to "Logout", session_path(session[:user_id]), method: :delete, class: "logout" %>
       <% end %>
     </nav>
     <%= yield %>
