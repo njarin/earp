@@ -187,3 +187,7 @@ article {
 .reveal-down {
   display: none;
 }
+
+.reg-link {
+  font-size: 4em;
+}
