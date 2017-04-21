@@ -1,0 +1,7 @@
+<% if @experiment.staff_needed > @experiment.staff.length && current_user && current_user.role == 'staff' && !@experiment.staff.include?(current_user)%>
+  <div>
+    <%= button_to "Join Experiment Staff", experiment_path(@experiment.id), method: 'patch', data: {confirm: 'Would you like to join this experiment?' } %>
+  </div>
+<% elsif @experiment.staff_needed > @experiment.staff.length %>
+  <p class='join-experiment-notice'>You have already joined this experiment </p>
+<% end %>

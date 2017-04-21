@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature "joining an experiment", js: true do
+xfeature "joining an experiment", js: true do
   include SessionsHelper
   let(:owner) { User.create(email: 'faculty@example.com',
                           name: 'Faculty Member',
