@@ -19,6 +19,7 @@
 
 require 'simplecov'
 SimpleCov.start
+require "rack_session_access/capybara"
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

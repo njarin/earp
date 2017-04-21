@@ -39,6 +39,7 @@ group :test do
   gem 'rspec-rails'
   gem 'rails-controller-testing'
   gem 'capybara'
+  gem 'rack_session_access'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
   gem 'chromedriver-helper'
