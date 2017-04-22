@@ -2,101 +2,127 @@
 <div id="landing-ajax">
 <!-- above div temporarily named for functionality pre full ajaxify of site -->
 
-<div class="join-experiment-container">
-  <%= render "join_experiment" %>
-</div>
-
-<div id= "<%=@experiment.id%>" class = "experiment">
-
-  <div>
-    <h2 >Title: </h2>
-    <div class = "content">
-      <p><%= @experiment.title %></p>
-  </div>
-</div>
-
-  <div>
-    <h2>Summary: </h2>
-    <div class = "content">
-    <p><%= @experiment.summary %></p>
-    </div>
+  <div class="join-experiment-container">
+    <%= render "join_experiment" %>
   </div>
 
-  <div class="current-staff">
-    <h2>Current Staff</h2>
-    <ul>
-    <% @experiment.staff.each do |staffmember| %>
-      <li><%= staffmember.name %></li>
-    <% end %>
+  <div class="container">
+
+    <ul class="tabs">
+      <li class="active"><a href="#<%=@experiment.id%>">Details</a></li>
+      <li><a href="#comments">Comments</a></li>
     </ul>
+
+    <div id="<%=@experiment.id%>" class="active tab-content">
+
+      <div>
+        <h2 >Title: </h2>
+        <div class = "content">
+          <p><%= @experiment.title %></p>
+        </div>
+      </div>
+
+      <div>
+        <h2>Summary: </h2>
+        <div class = "content">
+          <p><%= @experiment.summary %></p>
+        </div>
+      </div>
+
+      <div class="current-staff">
+        <h2>Current Staff</h2>
+        <ul>
+          <% @experiment.staff.each do |staffmember| %>
+            <li><%= staffmember.name %></li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="staff-needed">
+        <h2>Staff Needed</h2>
+        <p class="num-staff-needed"><%= @experiment.staff_needed %></p>
+      </div>
+
+
+      <div>
+        <h2>Contact Information: </h2>
+        <div class = "content">
+          <p><%= @experiment.contact_info %></p>
+        </div>
+      </div>
+
+
+      <div class="reveal-down">
+        <div>
+          <h2>Abstract: </h2>
+          <div class = "content">
+            <p><%= @experiment.summary %></p>
+          </div>
+        </div>
+
+        <div>
+          <h2>Introduction: </h2>
+          <div class = "content">
+            <p><%= @experiment.introduction %></p>
+          </div>
+        </div>
+
+        <div>
+          <h2>Hypothesis: </h2>
+          <div class = "content">
+            <p><%= @experiment.hypothesis %></p>
+          </div>
+        </div>
+
+        <div>
+          <h2>Methods: </h2>
+          <div class = "content">
+            <p><%= @experiment.methods %></p>
+          </div>
+        </div>
+
+        <div>
+          <h2>Observations: </h2>
+          <div class = "content">
+            <p><%= @experiment.observations %></p>
+          </div>
+        </div>
+
+        <div>
+          <h2>Results: </h2>
+          <div class = "content">
+            <p><%= @experiment.results %></p>
+          </div>
+        </div>
+
+        <div>
+          <h2>Conclusion: </h2>
+          <div class = "content">
+            <p><%= @experiment.conclusion %></p>
+          </div>
+        </div>
+
+      </div>
+
+      <button id="reveal-info" type="button">More Information</button>
+
+      <footer>
+        <p><%= link_to "Back", experiments_path %></p>
+      </footer>
+    </div>
+
+    <div id="comments" class="tab-content">
+      <% if @experiment.comments %>
+        <ul class="comment-list">
+          <% @experiment.comments.each do |comment| %>
+            <li class="comment-item"><%= comment.content %>
+            <p>&nbsp; &nbsp; &nbsp; <%= "--#{comment.username}" %></p></li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>There are no comments.</p>
+      <% end %>
+
+    </div>
   </div>
-
-  <div class="staff-needed">
-    <h2>Staff Needed</h2>
-    <p class="num-staff-needed"><%= @experiment.staff_needed %></p>
-    </div>
-
-
-  <div>
-    <h2>Contact Information: </h2>
-    <div class = "content">
-    <p><%= @experiment.contact_info %></p>
-    </div>
-  </div>
-
-
-  <div class="reveal-down">
-    <div>
-      <h2>Abstract: </h2>
-      <div class = "content">
-      <p><%= @experiment.summary %></p>
-      </div>
-    </div>
-
-    <div>
-      <h2>Introduction: </h2>
-      <div class = "content">
-      <p><%= @experiment.introduction %></p>
-      </div>
-    </div>
-
-    <div>
-      <h2>Hypothesis: </h2>
-      <div class = "content">
-      <p><%= @experiment.hypothesis %></p>
-      </div>
-    </div>
-
-    <div>
-      <h2>Methods: </h2>
-      <div class = "content">
-      <p><%= @experiment.methods %></p>
-      </div>
-    </div>
-
-    <div>
-      <h2>Observations: </h2>
-      <div class = "content">
-      <p><%= @experiment.observations %></p>
-      </div>
-    </div>
-
-    <div>
-      <h2>Results: </h2>
-      <div class = "content">
-      <p><%= @experiment.results %></p>
-      </div>
-    </div>
-
-    <div>
-      <h2>Conclusion: </h2>
-      <div class = "content">
-      <p><%= @experiment.conclusion %></p>
-      </div>
-    </div>
-  </div>
-  <button id="reveal-info" type="button">More Information</button>
-  <footer>
-      <p><%= link_to "Back", experiments_path %></p>
-  </footer>
 </div>
