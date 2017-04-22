@@ -1,0 +1,4 @@
+ <%= form_for :comment, url: experiment_comments_path(@experiment.id) do |f| %>
+      <%= f.text_field :content, placeholder: "Experiment Chat" %>
+      <%= f.submit "Add" %>
+  <% end %>
