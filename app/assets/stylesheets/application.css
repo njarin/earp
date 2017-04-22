@@ -136,11 +136,12 @@ article {
 }
 
 #reveal-info {
-  border: 2px solid #002877;
+border: 2px solid #002877;
   padding: 3%;
-  min-width: 100%;
+  min-width: 90%;
   font-size: 3em;
-  margin: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 a:hover {
