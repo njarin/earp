@@ -3,6 +3,7 @@ class Experiment < ApplicationRecord
   has_many :comments
 
   validates_presence_of :title, :summary, :staff_needed
+  validates :staff_needed, numericality: { greater_than: 0, only_integer: true }
 
 
   def owner
