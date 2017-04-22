@@ -89,6 +89,10 @@ h2 {
   padding: 10px;
 }
 
+.experiment h2 {
+  font-size: 2em;
+}
+
 .errors {
   color: red;
   font-size: 2em;
@@ -102,6 +106,10 @@ a {
 
 .experiments-container {
   max-width: 90%;
+}
+
+.experiment {
+ font-size: 1.8em;
 }
 
 article {
@@ -143,7 +151,7 @@ footer {
 border: 2px solid #002877;
   padding: 3%;
   min-width: 90%;
-  font-size: 3em;
+  font-size: 2em;
   margin: 0 auto;
   display: block;
 }
