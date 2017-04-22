@@ -1,6 +1,6 @@
 <% if @experiment.staff_needed > 0 && current_user && current_user.role == "staff" && !@experiment.staff.include?(current_user)%>
 
-  <div>
+  <div class = "join">
     <%= button_to "Join Experiment Staff", experiment_path(@experiment.id), method: :patch, class: "join-experiment-btn", data: {confirm: "Would you like to join this experiment?" } %>
   </div>
 <% elsif @experiment.staff_needed > 0 && current_user && current_user.role == "staff" %>
