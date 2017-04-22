@@ -12,6 +12,7 @@
     <nav>
 
       <%= link_to "EARP", experiments_path, class: "nav-logo" %>
+      <img src="../../images/aardvark.png">
       <% if session[:user_id] %>
         <%= link_to "Logout", session_path(session[:user_id]), method: :delete, class: "logout" %>
       <% end %>
