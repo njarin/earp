@@ -10,3 +10,5 @@
 # Purpose:
 
 Establish a research experiments post and message board for communication between Established Autogenics lab personnel and university faculty.
+
+To get started just visit the [Heroku app](http://ea-research-portal.herokuapp.com/) and register as either faculty or staff.
